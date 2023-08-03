@@ -8,6 +8,25 @@ import requests
 url = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
 
 class Weather:
+    """ Creates a Weather object that can be used to get the weather
+    forecast for a given city or latitude and longitude.
+    
+    Package use example:
+    # Create a Weather object
+    # The api key below is not valid, you must use your own
+    # Get your own api key from https://openweathermap.org/api
+    # And wait a couple of hours for it to activate
+    
+    weather = Weather(apikey="fb026b1b1f2f3bf02874a165e116af7e", city="Madrid")
+    weather = Weather(apikey="fb026b1b1f2f3bf02874a165e116af7e", lat=40.4, lon=-3.7)
+    
+    # Get the next 12 hours of weather forecast
+    weather.next_12_hours()
+    
+    # Get the next 12 hours of weather forecast simplified
+    weather.next_12_hours_simplified()
+    
+    """"
 
     def __init__(self, apikey, city = None, lat = None, lon = None):
         if city:
