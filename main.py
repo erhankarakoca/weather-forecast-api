@@ -19,7 +19,7 @@ class Weather:
             r = requests.get(url)
             self.data = r.json()
         else:
-            print("Error: No city or lat lon provided")
+            raise TypeError("You must specify either a city or a latitude and longitude")
 
     def next_12_hours(self):
         return self.data["list"][:4]
