@@ -25,7 +25,11 @@ class Weather:
         return self.data["list"][:4]
 
     def next_12_hours_simplified(self):
-        pass
+        simple_data = []
+        for dicty in self.data["list"][:4]:
+            simple_data.append((dicty["dt_txt"], dicty["main"]["temp"], dicty["weather"][0]["description"]))
+            return simple_data
+        # return (self.data["list"][0]["dt_txt"], self.data["list"][0]["main"]["temp"], self.data["list"][0]["weather"][0]["description"])
 
-weather = Weather(apikey="fb026b1b1f2f3bf02874a165e116af7e", lat = 4.1, lon = 4.5)
-print(weather.next_12_hours())
+weather = Weather(apikey="fb026b1b1f2f3bf02874a165e116af7e", city=  "Madrid",  lat = 4.1, lon = 4.5)
+print(weather.next_12_hours_simplified())
