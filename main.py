@@ -25,8 +25,8 @@ class Weather:
     
     # Get the next 12 hours of weather forecast simplified
     weather.next_12_hours_simplified()
-    
-    """"
+
+    """
 
     def __init__(self, apikey, city = None, lat = None, lon = None):
         if city:
