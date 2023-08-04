@@ -5,7 +5,7 @@ import requests
 # r = requests.get(url)
 # print(r.json())
 
-url = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
+# url = "api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}"
 
 class Weather:
     """ Creates a Weather object that can be used to get the weather
